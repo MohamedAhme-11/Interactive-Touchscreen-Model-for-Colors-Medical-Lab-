@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="Navbar">
+        <div class="logo-container">
+            <img class="imagelogo" src="WhatsApp Image 2024-06-02 at 11.24.56_58bd8105.jpg" alt="Logo">
+        </div>
+        <button id="export">Export to Excel</button>
+    </div>
+
+    <div class="form-container" id="form-container">
+        <input type="text" id="name" placeholder="Please Enter Your Name"/>
+        <input type="email" id="email" placeholder="Please Enter Your Email"/>
+        <input type="text" id="number" placeholder="Please Enter Your Number"/>
+        <button id="submit">Submit</button>
+    </div>
+
+    <div class="question-container" id="question-container" style="display:none;">
+        <h2>What is your most likely long-term dietary pattern?</h2>
+        <div class="options-container">
+            <div class="option" data-question="prevotella" id="option1" onclick="showPopup('prevotella')">
+                <div class="label">Carbohydrate-rich diet</div>
+            </div>
+            <div class="option" data-question="bacteroides" id="option2" onclick="showPopup('bacteroides')">
+                <div class="label">High protein and animal fat diet</div>
+            </div>
+            <div class="option" data-question="ruminococcus" id="option3" onclick="showPopup('ruminococcus')">
+                <div class="label">High resistant starch diet</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="popup" id="popup">
+        <div class="popup-content" id="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <div id="popup-text"></div>
+            <img class="result-logo" src="WhatsApp Image 2024-06-02 at 11.24.56_58bd8105.jpg" alt="Logo">
+        </div>
+    </div>
+
+    <div class="thanks-container" id="thanks-container" style="display:none;">
+        <div class="thank-you-text" id="thank-you-text">Thank you!</div>
+        <button id="reload">New User</button>
+    </div>
+    
+
+    <div class="steps">
+        <div class="step active" id="step1">1</div>
+        <div class="step" id="step2">2</div>
+        <div class="step" id="step3">3</div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.2/xlsx.full.min.js"></script>
+    <script src="Task.js" defer></script>
+</body>
+</html>
